@@ -1,0 +1,202 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   compilateur.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghanime <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/30 14:11:52 by cghanime          #+#    #+#             */
+/*   Updated: 2018/09/03 13:48:02 by cghanime         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include"compilateur.h"
+
+int     ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (0);
+}
+
+int     ft_nputchar(char c, int n)
+{
+	int i;
+	i=0;
+
+	while (i < n)
+		{
+			ft_putchar(c);
+			i= i + 1;
+		}
+	return (0);
+}
+
+void    ft_print_alphabet(void)
+{
+	char c;
+	c=97;
+
+		while (c < 123)
+		{
+			ft_putchar(c);
+			c++;
+		}
+}
+
+void    ft_print_reverse_alphabet(void)
+{
+	char c;
+	c=122;
+
+		while (c > 96)
+	    {
+		    ft_putchar(c);
+		    c--;
+	    }
+}
+
+void    ft_print_numbers(void)
+{
+	char c;
+	c=48;
+
+		while (c < 58)
+		{
+			ft_putchar(c);
+			c++;
+		}
+}
+
+void ft_is_negative(int n)
+{
+	char c;
+	c=0;
+
+		if (n > 0)
+		{
+			c=80;
+			ft_putchar(c);
+		}
+		else 
+		{
+			c=78;
+			ft_putchar(c);
+		}
+}
+
+int ft_print_comb(void)
+{
+	char x;
+	char y;
+	char z;
+	x=0;
+	y=0;
+	z=0;
+
+		while (x <= 7)
+		{
+			y=x+1;
+				while (y <= 8)
+				{
+					z=y+1;
+					while (z <= 9)
+					{
+						ft_putchar(x+48);
+						ft_putchar(y+48);
+						ft_putchar(z+48);
+							if (x==7 && y==8 && z==9)
+							{
+								ft_putchar(',');
+							}
+							else
+							{
+								ft_putchar(',');
+								ft_putchar(' ');
+							}
+					z++;
+					}
+				y++;
+			    }
+		x++;
+		}
+return (0);
+}
+
+void    ft_ft(int *nbr)
+{
+    *nbr = 42;
+}
+
+void    ft_ultimate_ft(int *********nbr)
+{
+    *********nbr = 42;
+}
+
+int ft_print_comb2(void)
+{
+	char x;
+	char y;
+	x=0;
+	y=0;
+
+				while (x <= 8)
+				{
+					y=x+1;
+					while (y <= 9)
+					{
+						ft_putchar((x+48)%10);
+						ft_putchar((y+48)%10);
+							if (x==8 && y==9)
+							{
+								ft_putchar(',');
+							}
+							else
+							{
+								ft_putchar(',');
+								ft_putchar(' ');
+							}
+					y++;
+					}
+				x++;
+			    }
+return (0);
+}
+
+
+								/*MAIN FUNCTION*/
+/*--------------------------------------------------------------------------*/
+
+/*int  main ()
+"{
+"ft_ultimate_ft(int *********nbr)
+"}*/
+
+int     main ()
+{
+    int *nbr;
+    int **nbr1;
+    int ***nbr2;
+    int ****nbr3;
+    int *****nbr4;
+    int ******nbr5;
+    int *******nbr6;
+    int ********nbr7;
+    int *********nbr8;
+    int x;
+
+    nbr = &x;
+    nbr1 = &nbr;
+    nbr2 = &nbr1;
+    nbr3 = &nbr2;
+    nbr4 = &nbr3;
+    nbr5 = &nbr4;
+    nbr6 = &nbr5;
+    nbr7 = &nbr6;
+    nbr8 = &nbr7;
+
+	ft_ultimate_ft(nbr8);
+    printf("%d",x);
+	return (0);
+}
+
+
